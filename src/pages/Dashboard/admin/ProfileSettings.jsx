@@ -278,7 +278,7 @@ const UsersTab = () => {
           </div>
         </div>
 
-        <div className="col-span-1 md:col-span-3 overflow-x-auto">
+        <div className="h-96 col-span-1 md:col-span-3 overflow-auto">
           <table className="w-full border border-gray-200 rounded text-sm">
             <thead>
               <tr className="bg-gray-50 text-gray-500 text-xs uppercase">
