@@ -60,11 +60,6 @@ const AdminDashboard = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
 
-    const token = localStorage.getItem("admin_access_token");
-    if (!token) {
-      navigate("/admin/login");
-      return;
-    }
 
     fetchDashboardData();
   }, []);

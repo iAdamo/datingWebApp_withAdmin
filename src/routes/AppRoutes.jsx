@@ -50,7 +50,7 @@ const PasswordSettings = lazy(() => import("../pages/Dashboard/admin/PasswordSet
 
 // Authentication checkers
 const isUserAuthenticated = () => !!localStorage.getItem("access_token");
-const isAdminAuthenticated = () => localStorage.getItem("adminLoggedIn") === "true";
+const isAdminAuthenticated = () => !!localStorage.getItem("admin_access_token");
 
 // Route guards
 const ProtectedUserRoute = ({ children }) =>

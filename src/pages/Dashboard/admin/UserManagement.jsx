@@ -84,7 +84,7 @@ const handleBanToggle = async () => {
   const filteredUsers = usersData.filter(
     (u) =>
       (filterStatus === "ALL" || u.status === filterStatus) &&
-      u.name.toLowerCase().includes(searchQuery.toLowerCase())
+      u?.name?.toLowerCase().includes(searchQuery.toLowerCase())
   );
   const totalPages = Math.ceil(filteredUsers.length / usersPerPage);
   const paginatedUsers = filteredUsers.slice(

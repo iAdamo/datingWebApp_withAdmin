@@ -45,12 +45,6 @@ const Reports = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
 
-    const token = localStorage.getItem("admin_access_token");
-    if (!token) {
-      navigate("/admin/login");
-      return;
-    }
-
     const loadReports = async () => {
       try {
         const data = await getReports();
